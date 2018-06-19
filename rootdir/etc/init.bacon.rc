@@ -25,6 +25,10 @@ on late-fs
     start servicemanager
     start surfaceflinger
     start bootanim
+
+    start configstore-hal-1-0
+    start gralloc-2-0
+
     # Mount RW partitions which need run fsck
     mount_all /vendor/etc/fstab.bacon --late
 
