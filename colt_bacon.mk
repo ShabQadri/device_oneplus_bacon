@@ -20,16 +20,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+  # Inherit some common Colt stuff.
+  $(call inherit-product, vendor/colt/common.mk)
+  $(call inherit-product, packages/apps/ColtApps/common.mk)
 
-PRODUCT_NAME := lineage_bacon
+PRODUCT_NAME := colt_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+TARGET_BOOT_ANIMATION_RES := 1080x1920
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="bacon-user 5.0.2 LRX22G YNG1TAS0YL release-keys" \
