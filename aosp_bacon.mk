@@ -20,12 +20,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit some Telephony stuff.
+$(call inherit-product, vendor/aosp/config/telephony.mk)
+
+# Inherit some common AEX stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := superior_bacon
+PRODUCT_NAME := aosp_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := OnePlus

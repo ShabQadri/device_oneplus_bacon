@@ -21,7 +21,7 @@
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=bacon user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 pm.sleep_mode=1
 TARGET_KERNEL_CONFIG := bacon_defconfig
-TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
+TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := bacon,A0001
