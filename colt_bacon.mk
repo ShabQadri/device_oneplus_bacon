@@ -20,17 +20,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Inherit some common Superior stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
-
-# Launcher
-TARGET_LAUNCHER := oplauncher
+# Inherit some common Colt stuff.
+$(call inherit-product, vendor/colt/config/common.mk)
 
 # Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BOOT_ANIMATION_RES := 1080x1920
 
 # Device identifications
-PRODUCT_NAME := superior_bacon
+PRODUCT_NAME := colt_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := OnePlus
@@ -49,5 +46,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
 # Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.superior.maintainer=Shahbaz Qadri
+COLT_DEVICE_MAINTAINER := Shab Qadri
