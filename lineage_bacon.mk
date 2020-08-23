@@ -20,18 +20,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Inherit some common Colt stuff.
-$(call inherit-product, vendor/colt/config/common.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Boot animation
-TARGET_BOOT_ANIMATION_RES := 1080x1920
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifications
-PRODUCT_NAME := colt_bacon
+PRODUCT_NAME := lineage_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_BRAND := oneplus
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
+
+
+#RR
+TARGET_FACE_UNLOCK_SUPPORTED := false
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
@@ -40,7 +44,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bacon \
     TARGET_DEVICE=A0001
 
-BUILD_FINGERPRINT := oneplus/bacon/A0001:5.1.1/LMY48B/YOG4PAS1N0:user/release-keys
+BUILD_FINGERPRINT := google/shamu/shamu:7.1.1/N6F27M/4299435:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
